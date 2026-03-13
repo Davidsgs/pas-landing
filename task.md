@@ -7,4 +7,4 @@
 - [x] Form styling and hover interactions for services
 - [x] Create `script.js` for scroll animations and WhatsApp form submission
 - [x] Initialize Git repository
-- [ ] Create remote GitHub repository and push code
+- [x] Create remote GitHub repository and push code
