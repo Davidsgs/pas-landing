@@ -11,6 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const animatedLogo = document.getElementById("animated-logo");
     const navLogoContainer = document.getElementById("nav-logo-container");
 
+    // Configuration Constants
+    const SCROLL_DURATION = 100; // Duration of section transition in ms
+    const BUSINESS_PHONE_NUMBER = "5491112345678"; // Replace with real number
+
     let isHeaderVisible = false;
 
     if (scrollWrapper) {
@@ -41,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let isScrolling = false;
         let startY = 0;
 
-        function smoothScrollTo(targetPosition, duration = 1000) {
+        function smoothScrollTo(targetPosition, duration = SCROLL_DURATION) {
             isScrolling = true;
             const startPosition = scrollWrapper.scrollTop;
             const distance = targetPosition - startPosition;
@@ -144,8 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Contact Form Interception (WhatsApp)
     // ==========================================
     const wpForm = document.getElementById("whatsapp-form");
-    // Constance variable for the phone number
-    const BUSINESS_PHONE_NUMBER = "5491112345678"; // Replace with real number
 
     if (wpForm) {
         wpForm.addEventListener("submit", (e) => {
