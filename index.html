@@ -126,17 +126,28 @@
                 <div class="services-grid">
                     <!-- Card 1 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <rect x="12" y="48" width="40" height="4" />
-                            <path d="M18 48 v4 M26 48 v4 M34 48 v4 M42 48 v4 M50 48 v4" />
-                            <path d="M22 48 V16 M28 48 V16" />
-                            <rect x="28" y="24" width="16" height="12" rx="2" />
-                            <rect x="30" y="20" width="12" height="4" rx="1" />
-                            <path d="M44 30 c 6 0 6 18 12 18" />
-                            <path d="M22 30 h -6 M16 26 v 8" />
-                            <path d="M30 36 v 12 M38 36 v 12 M30 48 h 8" />
-                            <path d="M32 36 v 12 M36 36 v 12 M34 36 v 12" stroke-width="1" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <!-- Base -->
+                            <line x1="15" y1="80" x2="85" y2="80" />
+                            <rect x="20" y="80" width="12" height="8" />
+                            <rect x="35" y="80" width="12" height="8" />
+                            <rect x="50" y="80" width="12" height="8" />
+                            <rect x="65" y="80" width="12" height="8" />
+                            <!-- Pillar -->
+                            <rect x="28" y="25" width="10" height="55" />
+                            <path d="M 28 25 H 55" />
+                            <!-- Control Box -->
+                            <rect x="50" y="15" width="20" height="16" rx="2" />
+                            <rect x="55" y="20" width="6" height="6" />
+                            <circle cx="65" cy="23" r="2" fill="currentColor" stroke="none" />
+                            <!-- Motor -->
+                            <rect x="28" y="40" width="28" height="18" rx="2" />
+                            <!-- Drill Bit -->
+                            <rect x="42" y="58" width="14" height="22" />
+                            <line x1="42" y1="74" x2="56" y2="74" />
+                            <!-- Cable -->
+                            <path d="M 56 45 Q 85 45 80 80" />
                         </svg>
                         <h3>Perforaciones H° A°</h3>
                         <div class="service-hover-content">
@@ -146,19 +157,22 @@
                     </div>
                     <!-- Card 2 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <!-- Joint shape -->
-                            <path d="M12 50 L20 40 L34 40 L42 50" />
-                            <path d="M28 40 v4 c0 2 -2 4 -4 4" />
-                            <!-- Gun body -->
-                            <rect x="28" y="16" width="24" height="8" rx="1" transform="rotate(-30 40 20)" />
-                            <path d="M21 21 L13 25 L19 25 L16 27" />
-                            <!-- Plunger -->
-                            <path d="M49 5 L59 11 M49 5 L45 0" />
-                            <path d="M52 7 L32 -5" />
-                            <!-- Handle & trigger -->
-                            <path d="M37 30 L32 42 M43 33 L38 44" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <!-- Joint profile -->
+                            <g transform="translate(0, 10)">
+                                <path d="M 20 80 V 60 H 35 L 42 70 L 49 60 H 60" />
+                            </g>
+                            <!-- Gun -->
+                            <g transform="translate(45, 35) rotate(30) translate(-35, -40)">
+                                <polygon points="10,40 22,36 22,44" />
+                                <rect x="22" y="32" width="30" height="16" rx="2" />
+                                <line x1="52" y1="28" x2="52" y2="52" />
+                                <line x1="52" y1="40" x2="75" y2="40" />
+                                <line x1="75" y1="40" x2="70" y2="30" />
+                                <rect x="42" y="48" width="8" height="20" rx="3" />
+                                <path d="M 35 48 L 38 60" />
+                            </g>
                         </svg>
                         <h3>Sellado de Juntas</h3>
                         <div class="service-hover-content">
@@ -168,20 +182,22 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <rect x="6" y="24" width="4" height="16" />
-                            <rect x="54" y="24" width="4" height="16" />
-                            <rect x="24" y="8" width="16" height="4" />
-                            <path d="M10 26 h 14 M40 26 h 14" />
-                            <path d="M10 38 h 10 M44 38 h 10" />
-                            <path d="M26 21 v -9 M38 21 v -9" />
-                            <circle cx="32" cy="38" r="14" />
-                            <circle cx="32" cy="38" r="6" />
-                            <circle cx="32" cy="28" r="1.5" />
-                            <circle cx="32" cy="48" r="1.5" />
-                            <circle cx="22" cy="38" r="1.5" />
-                            <circle cx="42" cy="38" r="1.5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <circle cx="50" cy="55" r="16" />
+                            <circle cx="50" cy="55" r="6" />
+                            <circle cx="50" cy="55" r="2" fill="currentColor" stroke="none" />
+                            <path d="M 34 50 H 20 M 34 60 H 20" />
+                            <rect x="14" y="42" width="6" height="26" rx="1" />
+                            <rect x="22" y="45" width="8" height="5" />
+                            <rect x="22" y="60" width="8" height="5" />
+                            <path d="M 66 50 H 80 M 66 60 H 80" />
+                            <rect x="80" y="42" width="6" height="26" rx="1" />
+                            <rect x="70" y="45" width="8" height="5" />
+                            <rect x="70" y="60" width="8" height="5" />
+                            <rect x="38" y="25" width="24" height="14" rx="2" />
+                            <line x1="44" y1="39" x2="44" y2="44" />
+                            <line x1="56" y1="39" x2="56" y2="44" />
                         </svg>
                         <h3>Boca de Ataque</h3>
                         <div class="service-hover-content">
@@ -191,13 +207,18 @@
                     </div>
                     <!-- Card 4 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <rect x="26" y="10" width="12" height="8" rx="1" />
-                            <rect x="22" y="18" width="20" height="4" rx="0.5" />
-                            <rect x="28" y="22" width="8" height="30" />
-                            <path d="M28 28 h8 M28 34 h8 M28 40 h8 M28 46 h8" />
-                            <path d="M28 52 l 4 8 l 4 -8 z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <rect x="44" y="15" width="12" height="15" />
+                            <line x1="40" y1="20" x2="60" y2="20" stroke-width="3" />
+                            <line x1="40" y1="26" x2="60" y2="26" stroke-width="3" />
+                            <rect x="38" y="30" width="24" height="14" rx="2" />
+                            <line x1="46" y1="30" x2="46" y2="44" stroke-width="2" />
+                            <line x1="54" y1="30" x2="54" y2="44" stroke-width="2" />
+                            <rect x="34" y="44" width="32" height="6" rx="2" />
+                            <rect x="44" y="50" width="12" height="25" />
+                            <path d="M 44 75 L 42 85 H 58 L 56 75" />
+                            <path d="M 38 65 L 44 70 M 62 65 L 56 70" stroke-width="3" />
                         </svg>
                         <h3>Anclajes</h3>
                         <div class="service-hover-content">
@@ -207,19 +228,18 @@
                     </div>
                     <!-- Card 5 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <!-- Cartridge -->
-                            <rect x="18" y="24" width="10" height="26" rx="1" />
-                            <path d="M18 24 v -6 l 3 -4 h 4 l 3 4 v 6" />
-                            <!-- Dash line in middle (like a division) -->
-                            <path d="M32 20 v 32" stroke-dasharray="4 4" />
-                            <!-- Anchor -->
-                            <rect x="40" y="22" width="8" height="28" />
-                            <rect x="36" y="16" width="16" height="6" rx="1" />
-                            <path d="M34 22 h 20" />
-                            <path d="M37 30 h 6 M37 36 h 6 M37 42 h 6 M37 48 h 6" />
-                            <path d="M40 50 l 4 6 l 4 -6 z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <rect x="20" y="35" width="18" height="45" rx="2" />
+                            <path d="M 24 35 L 26 20 H 32 L 34 35" />
+                            <line x1="29" y1="45" x2="29" y2="70" stroke-width="3" />
+                            <line x1="48" y1="30" x2="48" y2="80" stroke-dasharray="2 10" stroke-linecap="round" />
+                            <rect x="62" y="20" width="16" height="10" rx="2" />
+                            <rect x="66" y="12" width="8" height="8" />
+                            <rect x="64" y="30" width="12" height="40" />
+                            <path d="M 64 70 L 70 85 L 76 70 Z" />
+                            <path d="M 60 35 H 80 M 60 43 H 80 M 60 51 H 80 M 60 59 H 80 M 60 67 H 80"
+                                stroke-width="3" />
                         </svg>
                         <h3>Químico y Mecánico</h3>
                         <div class="service-hover-content">
@@ -229,16 +249,22 @@
                     </div>
                     <!-- Card 6 -->
                     <div class="service-card">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
-                            <circle cx="32" cy="32" r="6" />
-                            <path
-                                d="M32 18 c -1.1 0 -2 .9 -2 2 v 2 c -2.2 .5 -4.2 1.4 -6 2.6 l -1.5 -1.5 c -.8 -.8 -2 -.8 -2.8 0 l -2.8 2.8 c -.8 .8 -.8 2 0 2.8 l 1.5 1.5 c -1.2 1.8 -2.1 3.8 -2.6 6 h -2 c -1.1 0 -2 .9 -2 2 v 4 c 0 1.1 .9 2 2 2 h 2 c .5 2.2 1.4 4.2 2.6 6 l -1.5 1.5 c -.8 .8 -.8 2 0 2.8 l 2.8 2.8 c .8 .8 2 .8 2.8 0 l 1.5 -1.5 c 1.8 1.2 3.8 2.1 6 2.6 v 2 c 0 1.1 .9 2 2 2 h 4 c 1.1 0 2 -.9 2 -2 v -2 c 2.2 -.5 4.2 -1.4 6 -2.6 l 1.5 1.5 c .8 .8 2 .8 2.8 0 l 2.8 -2.8 c .8 -.8 .8 -2 0 -2.8 l -1.5 -1.5 c 1.2 -1.8 2.1 -3.8 2.6 -6 h 2 c 1.1 0 2 -.9 2 -2 v -4 c 0 -1.1 -.9 -2 -2 -2 h -2 c -.5 -2.2 -1.4 -4.2 -2.6 -6 l 1.5 -1.5 c .8 -.8 .8 -2 0 -2.8 l -2.8 -2.8 c -.8 -.8 -2 -.8 -2.8 0 l -1.5 1.5 c -1.8 -1.2 -3.8 -2.1 -6 -2.6 v -2 c 0 -1.1 -.9 -2 -2 -2 h -4 z" />
-                            <circle cx="32" cy="32" r="11" />
-                            <path d="M12 32 a 20 20 0 0 1 34 -15" />
-                            <path d="M46 17 l -6 -2 M46 17 l 1 6" />
-                            <path d="M52 32 a 20 20 0 0 1 -34 15" />
-                            <path d="M18 47 l 6 2 M18 47 l -1 -6" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <circle cx="50" cy="50" r="14" />
+                            <circle cx="50" cy="50" r="4" fill="currentColor" stroke="none" />
+                            <line x1="50" y1="28" x2="50" y2="36" stroke-width="6" />
+                            <line x1="50" y1="64" x2="50" y2="72" stroke-width="6" />
+                            <line x1="28" y1="50" x2="36" y2="50" stroke-width="6" />
+                            <line x1="64" y1="50" x2="72" y2="50" stroke-width="6" />
+                            <line x1="34" y1="34" x2="40" y2="40" stroke-width="6" />
+                            <line x1="66" y1="66" x2="60" y2="60" stroke-width="6" />
+                            <line x1="66" y1="34" x2="60" y2="40" stroke-width="6" />
+                            <line x1="34" y1="66" x2="40" y2="60" stroke-width="6" />
+                            <path d="M 22 50 A 28 28 0 0 1 70 30" />
+                            <path d="M 60 20 L 72 30 L 60 40" />
+                            <path d="M 78 50 A 28 28 0 0 1 30 70" />
+                            <path d="M 40 80 L 28 70 L 40 60" />
                         </svg>
                         <h3>Flexibilidad Operativa</h3>
                         <div class="service-hover-content">
