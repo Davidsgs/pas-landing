@@ -40,25 +40,32 @@ body {
     color: var(--text-dark);
     line-height: 1.6;
     overflow-x: hidden;
+    /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Allow selection in form elements */
+input,
+textarea,
+select {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
 
 #scroll-wrapper {
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-    /* Hide scrollbar for cleaner look */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    overflow: hidden;
+    /* Fully controlled via JS smooth scroll to avoid OS bounce */
 }
 
-#scroll-wrapper::-webkit-scrollbar {
-    display: none;
-}
-
+/* Base sections styling */
 section {
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+    width: 100%;
 }
 
 h1,
@@ -84,6 +91,11 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* Prevent image dragging */
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
 }
 
 .text-primary {
@@ -347,6 +359,7 @@ img {
     opacity: 0.8;
     animation: bounce 2s infinite ease-in-out;
     z-index: 20;
+    cursor: pointer;
 }
 
 .scroll-indicator .material-symbols-outlined {
@@ -760,7 +773,6 @@ img {
 .footer {
     padding: 4rem 0 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
-    scroll-snap-align: end;
 }
 
 .footer-logo {

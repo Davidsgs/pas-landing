@@ -33,10 +33,115 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
         });
+
+        // ==========================================
+        // 2. Custom One-Time Smooth Scrolling
+        // ==========================================
+        const sections = Array.from(document.querySelectorAll("section, .footer"));
+        let isScrolling = false;
+        let startY = 0;
+
+        function smoothScrollTo(targetPosition, duration = 1000) {
+            isScrolling = true;
+            const startPosition = scrollWrapper.scrollTop;
+            const distance = targetPosition - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const progress = Math.min(timeElapsed / duration, 1);
+
+                // Easing (easeInOutCubic)
+                const ease = progress < 0.5 ? 4 * progress * Math.pow(progress, 2) : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+                scrollWrapper.scrollTo(0, startPosition + distance * ease);
+
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(animation);
+                } else {
+                    setTimeout(() => { isScrolling = false; }, 300); // 300ms cooldown
+                }
+            }
+            requestAnimationFrame(animation);
+        }
+
+        function getNextSectionIndex(direction) {
+            const currentPos = scrollWrapper.scrollTop;
+            let currentIndex = 0;
+            let minDiff = Infinity;
+
+            sections.forEach((sec, index) => {
+                const diff = Math.abs(sec.offsetTop - currentPos);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    currentIndex = index;
+                }
+            });
+
+            if (direction === 1 && currentIndex < sections.length - 1) {
+                return currentIndex + 1;
+            } else if (direction === -1 && currentIndex > 0) {
+                return currentIndex - 1;
+            }
+            return currentIndex;
+        }
+
+        // Wheel events (Desktop)
+        scrollWrapper.addEventListener("wheel", (e) => {
+            e.preventDefault();
+            if (isScrolling) return;
+
+            const direction = e.deltaY > 0 ? 1 : -1;
+            const nextIndex = getNextSectionIndex(direction);
+            smoothScrollTo(sections[nextIndex].offsetTop);
+        }, { passive: false });
+
+        // Touch events (Mobile)
+        scrollWrapper.addEventListener("touchstart", (e) => {
+            startY = e.touches[0].clientY;
+        }, { passive: true });
+
+        scrollWrapper.addEventListener("touchmove", (e) => {
+            e.preventDefault(); // Prevents native drag scrolling
+        }, { passive: false });
+
+        scrollWrapper.addEventListener("touchend", (e) => {
+            if (isScrolling) return;
+            const endY = e.changedTouches[0].clientY;
+            const diff = startY - endY;
+
+            if (Math.abs(diff) > 30) {
+                const direction = diff > 0 ? 1 : -1;
+                const nextIndex = getNextSectionIndex(direction);
+                smoothScrollTo(sections[nextIndex].offsetTop);
+            }
+        }, { passive: true });
+
+        // Update Nav links to use Custom Scroll
+        const navLinks = document.querySelectorAll("nav a, .hero-buttons a, .scroll-indicator");
+        navLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                let href = link.getAttribute("href");
+
+                // If it's the scroll indicator, target the next section (Nosotros)
+                if (link.classList.contains('scroll-indicator')) {
+                    href = "#nosotros";
+                }
+
+                if (href && href.startsWith("#")) {
+                    e.preventDefault();
+                    const targetSec = document.querySelector(href);
+                    if (targetSec && !isScrolling) {
+                        smoothScrollTo(targetSec.offsetTop);
+                    }
+                }
+            });
+        });
     }
 
     // ==========================================
-    // 2. Contact Form Interception (WhatsApp)
+    // 3. Contact Form Interception (WhatsApp)
     // ==========================================
     const wpForm = document.getElementById("whatsapp-form");
     // Constance variable for the phone number
