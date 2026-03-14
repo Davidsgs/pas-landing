@@ -97,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Wheel events (Desktop)
         scrollWrapper.addEventListener("wheel", (e) => {
             if (isMobile()) return; // Allow native scrolling on mobile dimensions
+            if (e.target.tagName.toLowerCase() === 'textarea') return;
 
             e.preventDefault();
             if (isScrolling) return;
@@ -109,16 +110,19 @@ document.addEventListener("DOMContentLoaded", () => {
         // Touch events (Mobile)
         scrollWrapper.addEventListener("touchstart", (e) => {
             if (isMobile()) return;
+            if (e.target.tagName.toLowerCase() === 'textarea') return;
             startY = e.touches[0].clientY;
         }, { passive: true });
 
         scrollWrapper.addEventListener("touchmove", (e) => {
             if (isMobile()) return;
+            if (e.target.tagName.toLowerCase() === 'textarea') return;
             e.preventDefault(); // Prevents native drag scrolling
         }, { passive: false });
 
         scrollWrapper.addEventListener("touchend", (e) => {
             if (isMobile()) return;
+            if (e.target.tagName.toLowerCase() === 'textarea') return;
             if (isScrolling) return;
 
             const endY = e.changedTouches[0].clientY;
