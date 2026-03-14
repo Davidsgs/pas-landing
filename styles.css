@@ -218,7 +218,7 @@ img {
     width: 100%;
     z-index: 1000;
     height: 80px;
-    background-color: rgba(242, 244, 246, 0.95);
+    background-color: rgba(242, 244, 246, 0.7);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transform: translateY(-100%);
@@ -382,6 +382,47 @@ img {
     50% {
         transform: translate(-50%, 15px);
     }
+}
+
+/* ==========================================================================
+   Scroll Reveal Animations
+   ========================================================================== */
+.fade-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
 }
 
 /* ==========================================================================

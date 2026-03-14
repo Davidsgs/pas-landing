@@ -142,10 +142,32 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        // ==========================================
+        // 3. Scroll Reveal Animations (Intersection Observer)
+        // ==========================================
+        const observerOptions = {
+            root: scrollWrapper,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target); // Animate only once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
     }
 
     // ==========================================
-    // 3. Contact Form Interception (WhatsApp)
+    // 4. Contact Form Interception (WhatsApp)
     // ==========================================
     const wpForm = document.getElementById("whatsapp-form");
 
