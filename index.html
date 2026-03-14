@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAS Piedra Angular Solutions | Perforaciones en Hormigón y Sellado de Juntas</title>
-    
+    <title>PAS Piedra Angular Solutions | Perforaciones en Hormigón Armado</title>
+
     <!-- Meta SEO -->
-    <meta name="description" content="PAS (Piedra Angular Solutions) ofrece servicios profesionales de perforaciones en hormigón armado, sellado de juntas, y anclajes químicos/mecánicos en Buenos Aires y CABA.">
-    <meta name="keywords" content="Perforaciones en hormigón armado, sellado de juntas, anclajes químicos, anclajes mecánicos, corte de hormigón, Buenos Aires, CABA, Gran Buenos Aires, Ituzaingó, Zona Oeste, PAS, Piedra Angular Solutions">
+    <meta name="description"
+        content="PAS (Piedra Angular Solutions) ofrece servicios profesionales de perforaciones en hormigón armado, sellado de juntas, y anclajes químicos/mecánicos en Buenos Aires y CABA (Ciudad Autonoma de Buenos Aires).">
+    <meta name="keywords"
+        content="Perforaciones en hormigón armado, sellado de juntas, anclajes químicos, anclajes mecánicos, corte de hormigón, Buenos Aires, CABA, Gran Buenos Aires, Zona Oeste, Zona Norte, Zona Sur, Zona Este, PAS, Piedra Angular Solutions">
     <meta name="author" content="PAS Piedra Angular Solutions">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Scroll Experience Container -->
     <div id="scroll-wrapper">
-        
+
         <!-- Navbar (Initially hidden or transparent, becomes sticky) -->
         <header id="main-header">
             <nav class="container">
                 <div class="logo-container" id="nav-logo-container">
-                    <!-- The logo will transition into here or be displayed here -->
+                    <img src="./public/logo.svg" alt="PAS Logo" class="nav-logo" style="width: 100px; height: auto;">
                 </div>
-                
+
                 <div class="nav-links">
                     <a href="#inicio">Inicio</a>
                     <a href="#nosotros">Nosotros</a>
                     <a href="#servicios">Servicios</a>
                     <a href="#proyectos">Proyectos</a>
                 </div>
-                
+
                 <a href="#contacto" class="btn-cta bg-primary">Contáctanos</a>
             </nav>
         </header>
@@ -47,38 +54,50 @@
             <div class="hero-background"></div>
             <div class="hero-content container">
                 <div class="hero-logo-wrapper" id="hero-logo-wrapper">
-                    <img src="./references/logo.svg" alt="PAS Logo" class="pas-logo" id="animated-logo">
+                    <img src="./public/logo-alt.svg" alt="PAS Logo" class="pas-logo" id="animated-logo">
                 </div>
-                
+
                 <h1 class="hero-title">Soluciones que <span class="text-primary">sostienen</span> estructuras</h1>
-                <p class="hero-subtitle">Especialistas en perforaciones y anclajes técnicos de alta precisión en CABA y el Gran Buenos Aires.</p>
-                
+                <p class="hero-subtitle">Especialistas en perforaciones y anclajes técnicos de alta precisión.</p>
+
                 <div class="hero-buttons">
                     <a href="#servicios" class="btn-cta bg-primary">Ver Servicios</a>
                     <a href="#proyectos" class="btn-outline">Nuestro Portfolio</a>
                 </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <span class="material-symbols-outlined">expand_more</span>
+                <span class="material-symbols-outlined">expand_more</span>
             </div>
         </section>
 
         <!-- Nosotros Section -->
         <section id="nosotros" class="about-section">
             <div class="container grids-2">
-                <div class="about-image">
+                <div class="about-image fade-left animate-on-scroll">
                     <div class="image-accent"></div>
                     <!-- Placeholder using via.placeholder.com or Unsplash -->
-                    <img src="https://images.unsplash.com/photo-1541888081622-1ca1aebaf9bf?q=80&w=800&auto=format&fit=crop" alt="PAS Profesionales en construcción">
+                    <img src="./public/about_us_img.webp" alt="PAS Profesionales en construcción">
                     <div class="experience-badge">
-                        <span class="number">+15</span>
+                        <span class="number">+8</span>
                         <span class="text">Años de<br>Experiencia</span>
                     </div>
                 </div>
                 <div class="about-content">
-                    <span class="section-top-title">Trayectoria y Solidez</span>
-                    <h2 class="section-title">Nosotros</h2>
-                    <p>En PAS (Piedra Angular Solutions) nos dedicamos a brindar soporte estructural de alta calidad, garantizando la solidez de cada proyecto mediante técnicas avanzadas y profesionalismo.</p>
-                    <p>Entendemos que la base de toda construcción es la confianza. Por eso, nuestro equipo de especialistas trabaja bajo los más estrictos estándares de seguridad y eficiencia operativa, adaptándonos a los desafíos más complejos de la arquitectura moderna en todo Buenos Aires y Zona Oeste (Ituzaingó).</p>
-                    
-                    <div class="features-grid">
+                    <span class="section-top-title fade-up animate-on-scroll">Trayectoria y Solidez</span>
+                    <h2 class="section-title fade-up animate-on-scroll delay-100">Nosotros</h2>
+                    <p class="fade-up animate-on-scroll delay-200">En PAS (Piedra Angular Solutions) nos dedicamos a
+                        brindar soporte estructural de alta calidad,
+                        garantizando la solidez de cada proyecto mediante técnicas avanzadas y profesionalismo.</p>
+                    <p class="fade-up animate-on-scroll delay-300">Entendemos que la base de toda construcción es la
+                        confianza. Por eso, nuestro equipo de
+                        especialistas trabaja bajo los más estrictos estándares de seguridad y eficiencia operativa,
+                        adaptándonos a los desafíos más complejos de la arquitectura moderna en todo Buenos Aires y
+                        Ciudad Capital.</p>
+
+                    <div class="features-grid fade-up animate-on-scroll delay-400">
                         <div class="feature-item">
                             <span class="material-symbols-outlined text-primary">verified</span>
                             <span>Calidad Certificada</span>
@@ -97,59 +116,161 @@
             <div class="container">
                 <div class="services-header">
                     <div>
-                        <span class="section-top-title">Qué hacemos</span>
-                        <h2 class="section-title">Servicios</h2>
+                        <span class="section-top-title fade-up animate-on-scroll">Qué hacemos</span>
+                        <h2 class="section-title fade-up animate-on-scroll delay-100">Servicios</h2>
                     </div>
-                    <p class="services-desc">Ofrecemos soluciones técnicas integrales para desafíos estructurales, utilizando tecnología de punta y personal altamente capacitado.</p>
+                    <p class="services-desc fade-up animate-on-scroll delay-200">Ofrecemos soluciones técnicas
+                        integrales para desafíos estructurales,
+                        utilizando tecnología de punta y personal altamente capacitado.</p>
                 </div>
-                
+
                 <div class="services-grid">
                     <!-- Card 1 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">dynamic_form</span>
+                    <div class="service-card fade-up animate-on-scroll delay-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <!-- Base -->
+                            <line x1="15" y1="80" x2="85" y2="80" />
+                            <rect x="20" y="80" width="12" height="8" />
+                            <rect x="35" y="80" width="12" height="8" />
+                            <rect x="50" y="80" width="12" height="8" />
+                            <rect x="65" y="80" width="12" height="8" />
+                            <!-- Pillar -->
+                            <rect x="28" y="25" width="10" height="55" />
+                            <path d="M 28 25 H 55" />
+                            <!-- Control Box -->
+                            <rect x="50" y="15" width="20" height="16" rx="2" />
+                            <rect x="55" y="20" width="6" height="6" />
+                            <circle cx="65" cy="23" r="2" fill="currentColor" stroke="none" />
+                            <!-- Motor -->
+                            <rect x="28" y="40" width="28" height="18" rx="2" />
+                            <!-- Drill Bit -->
+                            <rect x="42" y="58" width="14" height="22" />
+                            <line x1="42" y1="74" x2="56" y2="74" />
+                            <!-- Cable -->
+                            <path d="M 56 45 Q 85 45 80 80" />
+                        </svg>
                         <h3>Perforaciones H° A°</h3>
                         <div class="service-hover-content">
-                            <p>Perforaciones precisas en hormigón armado para ductos, pasantes y estructuras especiales. Garantizamos cortes limpios y exactos en los materiales más duros.</p>
+                            <p>Perforaciones exactas en hormigón para ductos y estructuras. Cortes limpios en los
+                                materiales más duros.</p>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">straighten</span>
+                    <div class="service-card fade-up animate-on-scroll delay-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <!-- Joint profile -->
+                            <g transform="translate(0, 10)">
+                                <path d="M 20 80 V 60 H 35 L 42 70 L 49 60 H 60" />
+                            </g>
+                            <!-- Gun -->
+                            <g transform="translate(45, 35) rotate(30) translate(-35, -40)">
+                                <polygon points="10,40 22,36 22,44" />
+                                <rect x="22" y="32" width="30" height="16" rx="2" />
+                                <line x1="52" y1="28" x2="52" y2="52" />
+                                <line x1="52" y1="40" x2="75" y2="40" />
+                                <line x1="75" y1="40" x2="70" y2="30" />
+                                <rect x="42" y="48" width="8" height="20" rx="3" />
+                                <path d="M 35 48 L 38 60" />
+                            </g>
+                        </svg>
                         <h3>Sellado de Juntas</h3>
                         <div class="service-hover-content">
-                            <p>Tratamientos técnicos para juntas de dilatación y control en grandes superficies. Prevenimos filtraciones y aseguramos la durabilidad estructural.</p>
+                            <p>Tratamientos técnicos para juntas de dilatación. Prevenimos filtraciones y aseguramos
+                                durabilidad.</p>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">adjust</span>
+                    <div class="service-card fade-up animate-on-scroll delay-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <circle cx="50" cy="55" r="16" />
+                            <circle cx="50" cy="55" r="6" />
+                            <circle cx="50" cy="55" r="2" fill="currentColor" stroke="none" />
+                            <path d="M 34 50 H 20 M 34 60 H 20" />
+                            <rect x="14" y="42" width="6" height="26" rx="1" />
+                            <rect x="22" y="45" width="8" height="5" />
+                            <rect x="22" y="60" width="8" height="5" />
+                            <path d="M 66 50 H 80 M 66 60 H 80" />
+                            <rect x="80" y="42" width="6" height="26" rx="1" />
+                            <rect x="70" y="45" width="8" height="5" />
+                            <rect x="70" y="60" width="8" height="5" />
+                            <rect x="38" y="25" width="24" height="14" rx="2" />
+                            <line x1="44" y1="39" x2="44" y2="44" />
+                            <line x1="56" y1="39" x2="56" y2="44" />
+                        </svg>
                         <h3>Boca de Ataque</h3>
                         <div class="service-hover-content">
-                            <p>Apertura técnica de bocas para inspección y mantenimiento en estructuras críticas, operando con la máxima seguridad industrial.</p>
+                            <p>Apertura técnica para inspección y mantenimiento en estructuras críticas con máxima
+                                seguridad.</p>
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">anchor</span>
+                    <div class="service-card fade-up animate-on-scroll delay-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <rect x="44" y="15" width="12" height="15" />
+                            <line x1="40" y1="20" x2="60" y2="20" stroke-width="3" />
+                            <line x1="40" y1="26" x2="60" y2="26" stroke-width="3" />
+                            <rect x="38" y="30" width="24" height="14" rx="2" />
+                            <line x1="46" y1="30" x2="46" y2="44" stroke-width="2" />
+                            <line x1="54" y1="30" x2="54" y2="44" stroke-width="2" />
+                            <rect x="34" y="44" width="32" height="6" rx="2" />
+                            <rect x="44" y="50" width="12" height="25" />
+                            <path d="M 44 75 L 42 85 H 58 L 56 75" />
+                            <path d="M 38 65 L 44 70 M 62 65 L 56 70" stroke-width="3" />
+                        </svg>
                         <h3>Anclajes</h3>
                         <div class="service-hover-content">
-                            <p>Sistemas de fijación robustos para cargas pesadas en diversos sustratos, diseñados para resistir exigencias extremas de obra.</p>
+                            <p>Sistemas de fijación robustos para cargas pesadas, diseñados para exigencias extremas de
+                                obra.</p>
                         </div>
                     </div>
                     <!-- Card 5 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">science</span>
+                    <div class="service-card fade-up animate-on-scroll delay-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <rect x="20" y="35" width="18" height="45" rx="2" />
+                            <path d="M 24 35 L 26 20 H 32 L 34 35" />
+                            <line x1="29" y1="45" x2="29" y2="70" stroke-width="3" />
+                            <line x1="48" y1="30" x2="48" y2="80" stroke-dasharray="2 10" stroke-linecap="round" />
+                            <rect x="62" y="20" width="16" height="10" rx="2" />
+                            <rect x="66" y="12" width="8" height="8" />
+                            <rect x="64" y="30" width="12" height="40" />
+                            <path d="M 64 70 L 70 85 L 76 70 Z" />
+                            <path d="M 60 35 H 80 M 60 43 H 80 M 60 51 H 80 M 60 59 H 80 M 60 67 H 80"
+                                stroke-width="3" />
+                        </svg>
                         <h3>Químico y Mecánico</h3>
                         <div class="service-hover-content">
-                            <p>Instalación especializada de anclajes químicos y mecánicos de alta resistencia, ideales para rehabilitaciones y nuevas construcciones.</p>
+                            <p>Instalación de anclajes químicos y mecánicos de alta resistencia para rehabilitaciones y
+                                nuevas construcciones.</p>
                         </div>
                     </div>
                     <!-- Card 6 -->
-                    <div class="service-card">
-                        <span class="material-symbols-outlined text-primary icon">speed</span>
+                    <div class="service-card fade-up animate-on-scroll delay-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor"
+                            stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="service-svg-icon">
+                            <circle cx="50" cy="50" r="14" />
+                            <circle cx="50" cy="50" r="4" fill="currentColor" stroke="none" />
+                            <line x1="50" y1="28" x2="50" y2="36" stroke-width="6" />
+                            <line x1="50" y1="64" x2="50" y2="72" stroke-width="6" />
+                            <line x1="28" y1="50" x2="36" y2="50" stroke-width="6" />
+                            <line x1="64" y1="50" x2="72" y2="50" stroke-width="6" />
+                            <line x1="34" y1="34" x2="40" y2="40" stroke-width="6" />
+                            <line x1="66" y1="66" x2="60" y2="60" stroke-width="6" />
+                            <line x1="66" y1="34" x2="60" y2="40" stroke-width="6" />
+                            <line x1="34" y1="66" x2="40" y2="60" stroke-width="6" />
+                            <path d="M 22 50 A 28 28 0 0 1 70 30" />
+                            <path d="M 60 20 L 72 30 L 60 40" />
+                            <path d="M 78 50 A 28 28 0 0 1 30 70" />
+                            <path d="M 40 80 L 28 70 L 40 60" />
+                        </svg>
                         <h3>Flexibilidad Operativa</h3>
                         <div class="service-hover-content">
-                            <p>Capacidad de respuesta rápida y adaptación a los cronogramas de obra, desde CABA hasta el Gran Buenos Aires.</p>
+                            <p>Respuesta rápida y adaptación al cronograma de la obra, con cobertura en CABA y el Gran
+                                Buenos Aires.</p>
                         </div>
                     </div>
                 </div>
@@ -159,55 +280,55 @@
         <!-- Galería / Proyectos Section -->
         <section id="proyectos" class="portfolio-section">
             <div class="container text-center">
-                <span class="section-top-title">Nuestro Portfolio</span>
-                <h2 class="section-title">Imágenes de nuestros trabajos</h2>
-                
+                <span class="section-top-title fade-up animate-on-scroll">Nuestro Portfolio</span>
+                <h2 class="section-title fade-up animate-on-scroll delay-100">Imágenes de nuestros trabajos</h2>
+
                 <div class="portfolio-grid">
                     <!-- Project placeholders using real construction images from unsplash -->
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=600&auto=format&fit=crop" alt="Perforación de Hormigón">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-100">
+                        <img src="./public/work-images/perforacion.webp" alt="Perforación de Hormigón">
                         <div class="overlay">
                             <span>Perforación H°A°</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1541888081622-1ca1aebaf9bf?q=80&w=600&auto=format&fit=crop" alt="Obra de anclajes">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-200">
+                        <img src="./public/work-images/perforaciones-anclajes-mecanicos.webp" alt="Obra de anclajes">
                         <div class="overlay">
                             <span>Anclajes Especiales</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=600&auto=format&fit=crop" alt="Obra Civil">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-300">
+                        <img src="./public/work-images/perforacion-2-metros.webp" alt="Obra Civil">
                         <div class="overlay">
                             <span>Obra Civil</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=600&auto=format&fit=crop" alt="Sellado">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-400">
+                        <img src="./public/work-images/junta-de-dilatacion-2.webp" alt="Sellado">
                         <div class="overlay">
                             <span>Sellado de Juntas</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Mecánico">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-100">
+                        <img src="./public/work-images/abertura-junta.webp" alt="Mecánico">
                         <div class="overlay">
                             <span>Anclaje Mecánico</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?q=80&w=600&auto=format&fit=crop" alt="Industrial">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-200">
+                        <img src="./public/work-images/corte-disco-diamantado.webp" alt="Industrial">
                         <div class="overlay">
                             <span>Proyectos Industriales</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1508344928928-7137b29a1f05?q=80&w=600&auto=format&fit=crop" alt="Equipamiento">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-300">
+                        <img src="./public/work-images/plenos.webp" alt="Equipamiento">
                         <div class="overlay">
                             <span>Equipamiento</span>
                         </div>
                     </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop" alt="Planificación">
+                    <div class="portfolio-item fade-up animate-on-scroll delay-400">
+                        <img src="./public/work-images/perforacion-3.webp" alt="Planificación">
                         <div class="overlay">
                             <span>Planificación</span>
                         </div>
@@ -219,11 +340,12 @@
         <!-- Contact Section -->
         <section id="contacto" class="contact-section">
             <div class="container grids-2">
-                <div class="contact-info">
+                <div class="contact-info fade-left animate-on-scroll">
                     <span class="section-top-title">Hablemos</span>
                     <h2 class="section-title">Contacto</h2>
-                    <p class="contact-desc">¿Tiene un proyecto en mente en Buenos Aires o necesita asesoramiento técnico? Complete el formulario y nuestro equipo se comunicará por WhatsApp a la brevedad.</p>
-                    
+                    <p class="contact-desc">¿Tiene un proyecto en mente en Buenos Aires o necesita asesoramiento
+                        técnico? Complete el formulario y nuestro equipo se comunicará por WhatsApp a la brevedad.</p>
+
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="icon-bubble">
@@ -231,7 +353,7 @@
                             </div>
                             <div>
                                 <span class="label">Email</span>
-                                <span class="value">contacto@psapiedraangular.com</span>
+                                <span class="value">ventas@pasoluciones.com.ar</span>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -254,57 +376,61 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
+
+                <div class="contact-form-container fade-up animate-on-scroll delay-200">
                     <form id="whatsapp-form" class="whatsapp-form">
                         <div class="form-group">
                             <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" maxlength="50"
+                                required>
+                            <div class="char-counter"></div><span id="nombre-count">0</span>/50
                         </div>
-                        <div class="form-group">
-                            <label for="servicio">Servicio de Interés</label>
-                            <select id="servicio" name="servicio" required>
-                                <option value="" disabled selected>Seleccione un servicio</option>
-                                <option value="Perforaciones H° A°">Perforaciones H° A°</option>
-                                <option value="Sellado de Juntas">Sellado de Juntas</option>
-                                <option value="Boca de Ataque">Boca de Ataque</option>
-                                <option value="Anclajes">Anclajes</option>
-                                <option value="Químico y Mecánico">Químico y Mecánico</option>
-                                <option value="Flexibilidad Operativa">Flexibilidad Operativa</option>
-                                <option value="Consultoría General">Consultoría General</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="consulta">Consulta</label>
-                            <textarea id="consulta" name="consulta" rows="4" placeholder="Cuéntanos sobre tu proyecto o necesidades..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit bg-primary">
-                            Enviar Mensaje por WhatsApp
-                            <span class="material-symbols-outlined">send</span>
-                        </button>
-                    </form>
                 </div>
+                <div class="form-group">
+                    <label for="servicio">Servicio de Interés</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="" disabled selected>Seleccione un servicio</option>
+                        <option value="Perforaciones H° A°">Perforaciones H° A°</option>
+                        <option value="Sellado de Juntas">Sellado de Juntas</option>
+                        <option value="Boca de Ataque">Boca de Ataque</option>
+                        <option value="Anclajes Químico y/o Mecánico">Anclajes Químico y/o Mecánico</option>
+                        <option value="Flexibilidad Operativa">Flexibilidad Operativa</option>
+                        <option value="Consultoría General">Consultoría General</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" name="consulta" rows="4"
+                        placeholder="Cuéntanos sobre tu proyecto o necesidades..." maxlength="500" required></textarea>
+                    <div class="char-counter"><span id="consulta-count">0</span>/500</div>
+                </div>
+                <button type="submit" class="btn-submit bg-primary">
+                    Enviar Mensaje por WhatsApp
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                    </svg>
+                </button>
+                </form>
             </div>
-        </section>
+    </div>
+    </section>
 
-        <!-- Footer -->
-        <footer class="footer bg-dark text-light">
-            <div class="container text-center">
-                <div class="footer-logo">
-                    <img src="./references/logo.svg" alt="PAS Logo" class="footer-pas-img">
-                </div>
-                <p class="copyright">© 2026 PAS Piedra Angular Solutions. Todos los derechos reservados.</p>
-                <div class="social-links">
-                    <a href="#">LinkedIn</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Facebook</a>
-                </div>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light">
+        <div class="container text-center">
+            <div class="footer-logo">
+                <img src="./public/logo-alt.svg" alt="PAS Logo" class="footer-pas-img">
             </div>
-        </footer>
+            <p class="copyright">© 2026 PAS Piedra Angular Solutions. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
