@@ -579,27 +579,29 @@ img {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-height: 380px;
+    justify-content: center;
 }
 
 .service-card .icon,
 .service-card .service-svg-icon {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
     display: block;
-    transition: var(--transition);
+    transition: transform 0.4s ease;
 }
 
 .service-card .service-svg-icon {
     width: 100px;
     height: 100px;
     color: var(--primary);
+    margin-bottom: 1.5rem;
 }
 
 .service-card h3 {
     font-size: 1.15rem;
     color: var(--text-light);
-    margin-bottom: 1rem;
-    transition: var(--transition);
+    margin-bottom: 0;
+    transition: transform 0.4s ease;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.05em;
@@ -607,32 +609,37 @@ img {
 
 /* Hover Interaction for Cards */
 .service-hover-content {
-    max-height: 0;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 2rem;
+    right: 2rem;
     opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
 }
 
 .service-card p {
-    color: rgba(31, 33, 35, 0.8);
+    color: var(--bg-dark);
+    font-weight: 500;
     font-size: 0.9rem;
-    margin-top: 1rem;
+    margin: 0;
 }
 
 .service-card:hover {
     background-color: var(--primary);
-    transform: translateY(-5px);
 }
 
 .service-card:hover .icon,
 .service-card:hover .service-svg-icon,
 .service-card:hover h3 {
     color: var(--bg-dark);
+    transform: translateY(-40px);
 }
 
 .service-card:hover .service-hover-content {
-    max-height: 200px;
     opacity: 1;
+    transform: translateY(0);
 }
 
 /* ==========================================================================
