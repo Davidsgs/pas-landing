@@ -25,27 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!isHeaderVisible) {
                     header.classList.add("visible");
                     isHeaderVisible = true;
-
-                    // Move logo to header seamlessly (Simulated DOM Move)
-                    // Appending it to Nav to keep semantic HTML and prevent z-index bugs
-                    animatedLogo.style.width = "100px";
-                    animatedLogo.style.height = "auto";
-                    navLogoContainer.appendChild(animatedLogo);
-
-                    // Hide empty wrapper
-                    logoHeroWrapper.style.opacity = "0";
                 }
             } else {
                 if (isHeaderVisible) {
                     header.classList.remove("visible");
                     isHeaderVisible = false;
-
-                    // Give logo back to hero
-                    animatedLogo.style.width = "100%";
-                    logoHeroWrapper.appendChild(animatedLogo);
-
-                    // Show hero wrapper
-                    logoHeroWrapper.style.opacity = "1";
                 }
             }
         });
@@ -73,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Construct template message
-            const rawMessage = `¡Hola, equipo de PAS! Mi nombre es ${nombre}. Vi sus excelentes trabajos y me interesa cotizar un servicio de ${servicio}. Mi consulta es: ${consulta}. ¡Espero su respuesta para empezar a trabajar juntos!`;
+            const rawMessage = `¡Hola, equipo de PAS! Mi nombre es ${nombre}. Vi sus excelentes trabajos y me interesa contactar con ustedes por ${servicio}. Mi consulta es: ${consulta}. ¡Espero su respuesta, muchas gracias!`;
 
             // URL Encode the message
             const encodedMessage = encodeURIComponent(rawMessage);
