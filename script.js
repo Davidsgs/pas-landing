@@ -163,6 +163,61 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // ==========================================
+        // 2.5. Dot Navigation (Scroll Spy)
+        // ==========================================
+        const dots = document.querySelectorAll('.dot-nav .dot');
+        const dotIndicator = document.getElementById('dot-indicator');
+        const dotNav = document.getElementById('dot-nav');
+
+        function updateDotNavigation() {
+            if (!dotIndicator || dots.length === 0) return;
+            
+            let currentIndex = 0;
+            let minDiff = Infinity;
+            const currentPos = scrollWrapper.scrollTop;
+            
+            // Find which section is currently focused (nearest)
+            sections.forEach((sec, index) => {
+                const diff = Math.abs(sec.offsetTop - currentPos);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    currentIndex = index;
+                }
+            });
+
+            // Map index to dot (e.g. if we are in footer, keep last dot active)
+            const dotIndex = Math.min(currentIndex, dots.length - 1);
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                if(index === dotIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            // Animate indicator circle
+            const activeDot = dots[dotIndex];
+            if (activeDot) {
+                const parentLi = activeDot.parentElement;
+                const topPos = parentLi.offsetTop + (parentLi.offsetHeight / 2);
+                dotIndicator.style.transform = `translateY(${topPos}px)`;
+            }
+
+            // Invert colors if the current section is bright
+            if (sections[currentIndex] && ['nosotros', 'contacto'].includes(sections[currentIndex].id)) {
+                dotNav.classList.add('light-mode');
+            } else {
+                dotNav.classList.remove('light-mode');
+            }
+        }
+
+        // Initialize and listen
+        setTimeout(updateDotNavigation, 100);
+        scrollWrapper.addEventListener('scroll', updateDotNavigation, { passive: true });
+
+        // ==========================================
         // 3. Scroll Reveal Animations (Intersection Observer)
         // ==========================================
         const observerOptions = {
