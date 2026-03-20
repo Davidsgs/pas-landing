@@ -192,7 +192,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (swiperContainer) {
         new Swiper('.multiple-slide-carousel', {
             loop: true,
-            slidesPerView: 1,
+            slidesPerView: 1.2,
+            centeredSlides: true,
             spaceBetween: 16,
             navigation: {
                 nextEl: '.portfolio-carousel-container .swiper-button-next',
@@ -201,14 +202,17 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoints: {
                 768: {
                     slidesPerView: 2,
+                    centeredSlides: false,
                     spaceBetween: 24
                 },
                 1024: {
                     slidesPerView: 3,
+                    centeredSlides: false,
                     spaceBetween: 32
                 },
                 1280: {
                     slidesPerView: 4,
+                    centeredSlides: false,
                     spaceBetween: 32
                 }
             }
