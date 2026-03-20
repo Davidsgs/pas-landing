@@ -22,6 +22,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 
@@ -91,9 +94,6 @@
                         <span class="section-top-title fade-up animate-on-scroll">Qué hacemos</span>
                         <h2 class="section-title fade-up animate-on-scroll delay-100">Servicios</h2>
                     </div>
-                    <p class="services-desc fade-up animate-on-scroll delay-200">Ofrecemos soluciones técnicas
-                        integrales para desafíos estructurales,
-                        utilizando tecnología de punta y personal altamente capacitado.</p>
                 </div>
 
                 <div class="services-grid">
@@ -255,8 +255,8 @@
                 <div class="contact-info fade-left animate-on-scroll">
                     <span class="section-top-title">Hablemos</span>
                     <h2 class="section-title">Contacto</h2>
-                    <p class="contact-desc">¿Tiene un proyecto en mente en Buenos Aires o necesita asesoramiento
-                        técnico? Complete el formulario y nuestro equipo se comunicará por WhatsApp a la brevedad.</p>
+                    <p class="contact-desc">¿Tenés un proyecto en mente o necesitás asesoramiento
+                        técnico? Completá el formulario y nuestro equipo se comunicará por WhatsApp a la brevedad.</p>
 
                     <div class="contact-details">
                         <div class="contact-item">
@@ -283,7 +283,7 @@
                             </div>
                             <div>
                                 <span class="label">Ubicación principal</span>
-                                <span class="value">Buenos Aires, Zona Oeste (Ituzaingó) y CABA</span>
+                                <span class="value">Provincia de Buenos Aires y CABA</span>
                             </div>
                         </div>
                     </div>
@@ -330,60 +330,75 @@
         </section>
 
         <!-- Galería / Proyectos Section -->
-        <section id="proyectos" class="portfolio-section">
+        <section id="proyectos" class="portfolio-section bg-dark text-light">
             <div class="container text-center">
                 <span class="section-top-title fade-up animate-on-scroll">Nuestro Portfolio</span>
                 <h2 class="section-title fade-up animate-on-scroll delay-100">Imágenes de nuestros trabajos</h2>
 
-                <div class="portfolio-grid">
-                    <!-- Project placeholders using real construction images from unsplash -->
-                    <div class="portfolio-item fade-up animate-on-scroll delay-100">
-                        <img src="./public/work-images/perforacion.webp" alt="Perforación de Hormigón">
-                        <div class="overlay">
-                            <span>Perforación H°A°</span>
+                <div class="portfolio-carousel-container fade-up animate-on-scroll delay-200">
+                    <div class="swiper multiple-slide-carousel">
+                        <div class="swiper-wrapper">
+                            <!-- Project Placeholders -->
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/perforacion.webp" alt="Perforación de Hormigón">
+                                <div class="overlay">
+                                    <span>Perforación H°A°</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/perforaciones-anclajes-mecanicos.webp"
+                                    alt="Obra de anclajes">
+                                <div class="overlay">
+                                    <span>Anclajes Especiales</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/perforacion-2-metros.webp" alt="Obra Civil">
+                                <div class="overlay">
+                                    <span>Obra Civil</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/junta-de-dilatacion-2.webp" alt="Sellado">
+                                <div class="overlay">
+                                    <span>Sellado de Juntas</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/abertura-junta.webp" alt="Mecánico">
+                                <div class="overlay">
+                                    <span>Anclaje Mecánico</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/corte-disco-diamantado.webp" alt="Industrial">
+                                <div class="overlay">
+                                    <span>Proyectos Industriales</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/plenos.webp" alt="Equipamiento">
+                                <div class="overlay">
+                                    <span>Equipamiento</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide portfolio-item">
+                                <img src="./public/work-images/perforacion-3.webp" alt="Planificación">
+                                <div class="overlay">
+                                    <span>Planificación</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-200">
-                        <img src="./public/work-images/perforaciones-anclajes-mecanicos.webp" alt="Obra de anclajes">
-                        <div class="overlay">
-                            <span>Anclajes Especiales</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-300">
-                        <img src="./public/work-images/perforacion-2-metros.webp" alt="Obra Civil">
-                        <div class="overlay">
-                            <span>Obra Civil</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-400">
-                        <img src="./public/work-images/junta-de-dilatacion-2.webp" alt="Sellado">
-                        <div class="overlay">
-                            <span>Sellado de Juntas</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-100">
-                        <img src="./public/work-images/abertura-junta.webp" alt="Mecánico">
-                        <div class="overlay">
-                            <span>Anclaje Mecánico</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-200">
-                        <img src="./public/work-images/corte-disco-diamantado.webp" alt="Industrial">
-                        <div class="overlay">
-                            <span>Proyectos Industriales</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-300">
-                        <img src="./public/work-images/plenos.webp" alt="Equipamiento">
-                        <div class="overlay">
-                            <span>Equipamiento</span>
-                        </div>
-                    </div>
-                    <div class="portfolio-item fade-up animate-on-scroll delay-400">
-                        <img src="./public/work-images/perforacion-3.webp" alt="Planificación">
-                        <div class="overlay">
-                            <span>Planificación</span>
-                        </div>
+
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-nav">
+                        <button class="swiper-button-prev carousel-btn">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="swiper-button-next carousel-btn">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -395,7 +410,8 @@
                 <div class="about-image fade-left animate-on-scroll">
                     <div class="image-accent"></div>
                     <!-- Placeholder using via.placeholder.com or Unsplash -->
-                    <img src="./public/about_us_img.webp" alt="PAS Profesionales en construcción" class="about-main-img">
+                    <img src="./public/about_us_img.webp" alt="PAS Profesionales en construcción"
+                        class="about-main-img">
                     <img src="./public/logo-alt.svg" alt="PAS Logo" class="about-logo-overlay">
                     <div class="experience-badge">
                         <span class="number">+8</span>
@@ -441,6 +457,8 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

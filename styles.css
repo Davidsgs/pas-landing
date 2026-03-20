@@ -672,34 +672,80 @@ img {
    ========================================================================== */
 .portfolio-section {
     padding: 6rem 0;
-    background-color: var(--bg-light);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+/* Swiper Carousel Custom Styles */
+.portfolio-carousel-container {
+    position: relative;
     margin-top: 3rem;
+    padding-bottom: 5rem;
 }
 
-@media (min-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.multiple-slide-carousel {
+    width: 100%;
+    overflow: hidden;
 }
 
-@media (min-width: 1024px) {
-    .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.multiple-slide-carousel .swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+.carousel-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+.carousel-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding: 0;
+}
+
+.carousel-btn:hover {
+    background-color: var(--primary);
+    color: var(--bg-dark);
+    transform: scale(1.1);
+}
+
+.carousel-btn .material-symbols-outlined {
+    font-size: 1.5rem;
+}
+
+/* Hide default Swiper navigation icons */
+.carousel-btn.swiper-button-next::after, 
+.carousel-btn.swiper-button-prev::after {
+    display: none !important;
+}
+
+/* Reset Swiper default positioning for arrows */
+.carousel-nav .swiper-button-next, 
+.carousel-nav .swiper-button-prev {
+    position: static !important;
+    margin: 0 !important;
 }
 
 .portfolio-item {
-    aspect-ratio: 1/1;
+    aspect-ratio: 9/16;
     position: relative;
     border-radius: var(--border-radius);
     overflow: hidden;

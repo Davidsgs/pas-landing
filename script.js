@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // If it's the scroll indicator, target the next section (Nosotros)
                 if (link.classList.contains('scroll-indicator')) {
-                    href = "#nosotros";
+                    href = "#servicios";
                 }
 
                 if (href && href.startsWith("#")) {
@@ -186,7 +186,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // 4. Contact Form Interception (WhatsApp)
+    // 4. Portfolio Swiper Carousel Initialization
+    // ==========================================
+    const swiperContainer = document.querySelector('.multiple-slide-carousel');
+    if (swiperContainer) {
+        new Swiper('.multiple-slide-carousel', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: '.portfolio-carousel-container .swiper-button-next',
+                prevEl: '.portfolio-carousel-container .swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 32
+                },
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 32
+                }
+            }
+        });
+    }
+
+    // ==========================================
+    // 5. Contact Form Interception (WhatsApp)
     // ==========================================
     const wpForm = document.getElementById("whatsapp-form");
 
