@@ -135,6 +135,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, { passive: true });
 
+        // Keyboard events (Desktop)
+        document.addEventListener("keydown", (e) => {
+            if (isMobile()) return;
+            // Don't interfere if user is typing in a form field
+            const tagName = e.target.tagName.toLowerCase();
+            if (tagName === 'textarea' || tagName === 'input') return;
+
+            if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+                e.preventDefault();
+                if (isScrolling) return;
+
+                const direction = e.key === "ArrowDown" ? 1 : -1;
+                const nextIndex = getNextSectionIndex(direction);
+                if (nextIndex !== undefined) {
+                    smoothScrollTo(sections[nextIndex].offsetTop);
+                }
+            }
+        });
+
         // Update Nav links to use Custom Scroll
         const navLinks = document.querySelectorAll("nav a, .hero-buttons a, .scroll-indicator");
         navLinks.forEach(link => {
@@ -143,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // If it's the scroll indicator, target the next section (Nosotros)
                 if (link.classList.contains('scroll-indicator')) {
-                    href = "#nosotros";
+                    href = "#servicios";
                 }
 
                 if (href && href.startsWith("#")) {
@@ -161,6 +180,61 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
+
+        // ==========================================
+        // 2.5. Dot Navigation (Scroll Spy)
+        // ==========================================
+        const dots = document.querySelectorAll('.dot-nav .dot');
+        const dotIndicator = document.getElementById('dot-indicator');
+        const dotNav = document.getElementById('dot-nav');
+
+        function updateDotNavigation() {
+            if (!dotIndicator || dots.length === 0) return;
+            
+            let currentIndex = 0;
+            let minDiff = Infinity;
+            const currentPos = scrollWrapper.scrollTop;
+            
+            // Find which section is currently focused (nearest)
+            sections.forEach((sec, index) => {
+                const diff = Math.abs(sec.offsetTop - currentPos);
+                if (diff < minDiff) {
+                    minDiff = diff;
+                    currentIndex = index;
+                }
+            });
+
+            // Map index to dot (e.g. if we are in footer, keep last dot active)
+            const dotIndex = Math.min(currentIndex, dots.length - 1);
+
+            // Update dots
+            dots.forEach((dot, index) => {
+                if(index === dotIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            // Animate indicator circle
+            const activeDot = dots[dotIndex];
+            if (activeDot) {
+                const parentLi = activeDot.parentElement;
+                const topPos = parentLi.offsetTop + (parentLi.offsetHeight / 2);
+                dotIndicator.style.transform = `translateY(${topPos}px)`;
+            }
+
+            // Invert colors if the current section is bright
+            if (sections[currentIndex] && ['nosotros', 'contacto'].includes(sections[currentIndex].id)) {
+                dotNav.classList.add('light-mode');
+            } else {
+                dotNav.classList.remove('light-mode');
+            }
+        }
+
+        // Initialize and listen
+        setTimeout(updateDotNavigation, 100);
+        scrollWrapper.addEventListener('scroll', updateDotNavigation, { passive: true });
 
         // ==========================================
         // 3. Scroll Reveal Animations (Intersection Observer)
@@ -186,7 +260,41 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ==========================================
-    // 4. Contact Form Interception (WhatsApp)
+    // 4. Portfolio Swiper Carousel Initialization
+    // ==========================================
+    const swiperContainer = document.querySelector('.multiple-slide-carousel');
+    if (swiperContainer) {
+        new Swiper('.multiple-slide-carousel', {
+            loop: true,
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: '.portfolio-carousel-container .swiper-button-next',
+                prevEl: '.portfolio-carousel-container .swiper-button-prev',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    centeredSlides: false,
+                    spaceBetween: 24
+                },
+                1024: {
+                    slidesPerView: 3,
+                    centeredSlides: false,
+                    spaceBetween: 32
+                },
+                1280: {
+                    slidesPerView: 4,
+                    centeredSlides: false,
+                    spaceBetween: 32
+                }
+            }
+        });
+    }
+
+    // ==========================================
+    // 5. Contact Form Interception (WhatsApp)
     // ==========================================
     const wpForm = document.getElementById("whatsapp-form");
 
