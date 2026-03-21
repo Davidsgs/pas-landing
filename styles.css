@@ -656,24 +656,26 @@ img {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
 @media (min-width: 768px) {
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .services-grid .service-card {
+        width: calc(50% - 1rem);
     }
 }
 
 @media (min-width: 1024px) {
-    .services-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .services-grid .service-card {
+        width: calc(33.3333% - 1.3333rem);
     }
 }
 
 .service-card {
+    width: 100%;
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: var(--border-radius);
@@ -695,7 +697,7 @@ img {
 .service-card .service-svg-icon {
     font-size: 2.5rem;
     display: block;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, color 0.4s ease, fill 0.4s ease, stroke 0.4s ease;
 }
 
 .service-card .service-svg-icon {
@@ -705,11 +707,16 @@ img {
     margin-bottom: 1rem;
 }
 
+/* Ensure SVG internal paths transition smoothly */
+.service-card .service-svg-icon * {
+    transition: fill 0.4s ease, stroke 0.4s ease;
+}
+
 .service-card h3 {
     font-size: 1.1rem;
     color: var(--text-light);
     margin-bottom: 0;
-    transition: transform 0.4s ease;
+    transition: transform 0.4s ease, color 0.4s ease;
     text-transform: uppercase;
     font-weight: 800;
     letter-spacing: 0.05em;
@@ -744,6 +751,27 @@ img {
 .service-card:hover h3 {
     color: var(--bg-dark);
     transform: translateY(-55px);
+}
+
+/* Override SVG specific colors on hover so detail is retained but contrast is high */
+.service-card:hover .service-svg-icon *[style*="fill:#f49600"],
+.service-card:hover .service-svg-icon *[fill="#f49600"],
+.service-card:hover .service-svg-icon *[fill="#E20613"],
+.service-card:hover .service-svg-icon .st0,
+.service-card:hover .service-svg-icon *[style*="fill:#E20613"] {
+    fill: var(--bg-dark) !important;
+}
+
+.service-card:hover .service-svg-icon *[style*="stroke:#f49600"],
+.service-card:hover .service-svg-icon *[stroke="#f49600"] {
+    stroke: var(--bg-dark) !important;
+}
+
+.service-card:hover .service-svg-icon *[style*="fill:#575756"],
+.service-card:hover .service-svg-icon *[fill="#575756"],
+.service-card:hover .service-svg-icon .st2,
+.service-card:hover .service-svg-icon .st3 {
+    fill: #ffffff !important;
 }
 
 .service-card:hover .service-hover-content {
