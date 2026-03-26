@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Configuration Constants
     const SCROLL_DURATION = 100; // Duration of section transition in ms
-    const BUSINESS_PHONE_NUMBER = "5491112345678"; // Replace with real number
+    const BUSINESS_PHONE_NUMBER = "5491130144852";
 
     let isHeaderVisible = false;
 
@@ -190,11 +190,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function updateDotNavigation() {
             if (!dotIndicator || dots.length === 0) return;
-            
+
             let currentIndex = 0;
             let minDiff = Infinity;
             const currentPos = scrollWrapper.scrollTop;
-            
+
             // Find which section is currently focused (nearest)
             sections.forEach((sec, index) => {
                 const diff = Math.abs(sec.offsetTop - currentPos);
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update dots
             dots.forEach((dot, index) => {
-                if(index === dotIndex) {
+                if (index === dotIndex) {
                     dot.classList.add('active');
                 } else {
                     dot.classList.remove('active');
@@ -371,7 +371,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const wrapper = document.getElementById('modal-content-wrapper');
-        
+
         let isDragging = false;
         let startX, startY;
         let translateX = 0, translateY = 0;
@@ -385,9 +385,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (!modalImage.classList.contains('zoomed')) return;
                 isDragging = true;
                 hasDragged = false;
-                
+
                 modalImage.classList.add('dragging');
-                
+
                 const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
                 const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
 
@@ -406,35 +406,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const doDrag = (e) => {
                 if (!isDragging) return;
-                
+
                 // Only preventDefault on touchmove to stop page scrolling,
                 // but we also prevent default on mousemove to avoid selecting text/ghost dragging.
                 if (e.cancelable) e.preventDefault();
-                
+
                 const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
                 const clientY = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
 
                 const moveX = clientX - startX;
                 const moveY = clientY - startY;
-                
+
                 if (Math.abs(moveX) > 5 || Math.abs(moveY) > 5) {
                     hasDragged = true;
                 }
-                
+
                 translateX = initialTranslateX + moveX;
                 translateY = initialTranslateY + moveY;
-                
+
                 // Calculate pixel-perfect screen bounds
                 const scaledWidth = modalImage.clientWidth * ZOOM_SCALE;
                 const scaledHeight = modalImage.clientHeight * ZOOM_SCALE;
-                
+
                 // We only allow dragging if the scaled image is bigger than the screen.
                 const boundX = Math.max(0, (scaledWidth - wrapper.clientWidth) / 2);
                 const boundY = Math.max(0, (scaledHeight - wrapper.clientHeight) / 2);
-                
+
                 translateX = Math.max(-boundX, Math.min(boundX, translateX));
                 translateY = Math.max(-boundY, Math.min(boundY, translateY));
-                
+
                 // apply translate FIRST then scale so values are in raw screen pixels
                 modalImage.style.transform = `translate(${translateX}px, ${translateY}px) scale(${ZOOM_SCALE})`;
             };
@@ -481,15 +481,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 hasDragged = false; // Reset for next time
                 return;
             }
-            
+
             modalImage.classList.toggle('zoomed');
-            
+
             if (modalImage.classList.contains('zoomed')) {
-                translateX = 0; 
+                translateX = 0;
                 translateY = 0;
                 modalImage.style.transform = `translate(0px, 0px) scale(${ZOOM_SCALE})`;
             } else {
-                translateX = 0; 
+                translateX = 0;
                 translateY = 0;
                 modalImage.style.transform = '';
             }
