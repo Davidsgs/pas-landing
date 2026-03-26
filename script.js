@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Construct template message
-            const rawMessage = `¡Hola, equipo de PAS! Mi nombre es ${nombre}. Quisiera saber más sobre ${servicio}. ${consulta}`;
+            const rawMessage = `¡Hola, equipo de PAS!\nMi nombre es ${nombre}.\n\nQuisiera saber más sobre ${servicio}.\n\n${consulta}`;
 
             // URL Encode the message
             const encodedMessage = encodeURIComponent(rawMessage);
